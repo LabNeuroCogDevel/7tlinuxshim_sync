@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ROOT=$HOME/MRprojects/7TBrainMech/
-for d in /Disk4/Data/20*/*[lL]una*; do 
+for d in $(find /Disk4/Data/20*/ -maxdepth 1 -type d -iname '*luna*'); do 
  [ ! -r $ROOT/$(basename $d) ] && echo missing $d
 done
 
